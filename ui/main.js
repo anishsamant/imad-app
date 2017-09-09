@@ -4,6 +4,12 @@ var element=document.getElementById('main-text');
 element.innerHTML="NEW VALUE";
 
 var img=document.getElementById('madi');
+var marginLeft=0;
+function moveRight(){
+    marginLeft=marginLeft+10;
+    img.style.marginleft=marginLeft+"px";
+}
 img.onclick=function(){
-    img.style.marginLeft="200px";
+    var interval=setInterval(moveRight,100)
+    //img.style.marginLeft="200px";
 };
